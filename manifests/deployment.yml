@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "azdemoaks-12f9"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "azdemoaks-12f9"
+    spec:
+      containers:
+        - name: "azdemoaks-12f9"
+          image: "azdemoacrtest.azurecr.io/azdemoaks"
+          ports:
+          - containerPort: 90
